@@ -1,11 +1,17 @@
 import './App.scss';
-
-function App() {
+import {Contenedor,Menu} from './styles/components/index'
+import {NavLin} from 'react-router-dom'
+const App = () => {
   return (
-    <div className="App">
-      hola mundo
-    </div>
+    <Contenedor>
+      <Menu>
+        
+      </Menu>
+
+    </Contenedor>
   );
 }
+
+ 
 
 export default App;
