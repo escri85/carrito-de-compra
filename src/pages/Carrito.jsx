@@ -1,5 +1,6 @@
 import React from "react";
 import Boton from "../styles/components/Boton";
+import { connect } from "react-redux";
 
 const Carrito = ({carrito,setCarrito}) => {
 const vaciarCarrito=()=>{
@@ -34,4 +35,10 @@ setCarrito([])
   );
 };
 
-export default Carrito;
+const mapStateToProps = (estado) => {
+  return {
+    carrito:estado.carrito
+  }
+}
+
+export default connect(mapStateToProps)(Carrito)
